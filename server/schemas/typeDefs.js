@@ -33,6 +33,7 @@ type Auth {
     token: ID
     user: User
 }
+
 type Query {
     user: User
     categories: [Category]
