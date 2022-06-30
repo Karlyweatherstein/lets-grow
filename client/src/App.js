@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import "./App.css";
-import Login from "./components/Login";
+// import Login from "./components/Login";
 // import Hero from "./components/Hero";
 // import Footer from "./components/Footer";
 // import About from "./components/About";
@@ -19,7 +19,8 @@ function App() {
         <Routes>
           {/* <Route path="/" element={<Hero />} /> */}
           {/* <Route path="/about" element={<About />} /> */}
-          <Route path="/" element={<Login />} />
+          {/* <Route path="/" element={<Login />} /> */}
+          <Route path="/" element={<Signup />} />
         </Routes>
         {/* <Footer /> */}
       </div>

@@ -52,3 +52,16 @@ a:hover {
 .submit-btn:hover {
     background-color: #999999;
 }
+
+.signup {
+    text-align: center;
+}
+
+.signup-box {
+    border: solid;
+    border-color: #acbfa3;
+    width: 50%;
+    height: 300px;
+}
+
+
