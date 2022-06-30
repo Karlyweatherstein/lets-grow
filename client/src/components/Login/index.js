@@ -26,7 +26,7 @@ function Login() {
         </div>
         <div className="community">
         <h2>Not part of the community?
-            <a href="/"> Join now!</a> 
+            <a href="/Signup"> Join now!</a> 
             </h2>
             </div>
 

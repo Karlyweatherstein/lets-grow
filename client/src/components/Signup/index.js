@@ -31,7 +31,7 @@ function Signup() {
         </div>
         <div className="community">
         <h2>Already part of the community?
-            <a href="/"> Login!</a> 
+            <a href="/login"> Login!</a> 
             </h2>
             </div>
 
