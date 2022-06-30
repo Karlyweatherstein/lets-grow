@@ -3,9 +3,9 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import "./App.css";
 import Login from "./components/Login";
-import Hero from "./components/Hero";
-import Footer from "./components/Footer";
-import About from "./components/About";
+// import Hero from "./components/Hero";
+// import Footer from "./components/Footer";
+// import About from "./components/About";
 import Shop from "./components/Shop";
 import Signup from "./components/Signup";
 import Trainers from "./components/Trainers";
@@ -17,11 +17,11 @@ function App() {
       <div className="App">
         <Header />
         <Routes>
-          <Route path="/" element={<Hero />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/login" element={<Login />} />
+          {/* <Route path="/" element={<Hero />} /> */}
+          {/* <Route path="/about" element={<About />} /> */}
+          <Route path="/" element={<Login />} />
         </Routes>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </Router>
   );

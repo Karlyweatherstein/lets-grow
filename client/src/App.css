@@ -5,3 +5,50 @@
 /* Dark grey text = #5a5a5a */
 /* About us block color =  #999999 */
 /* Dark green for border box and submit buttons = #acbfa3 */
+
+.login {
+    text-align: center;
+}
+
+.login-box {
+    border: solid;
+    border-color: #acbfa3;
+    width: 50%;
+    height: 300px;
+}
+
+input {
+    height: 40px;
+    width: 80%; 
+    margin-top: 30px;
+}
+
+.community {
+    color: #5a5a5a;
+}
+
+a:visited {
+    color: #5a5a5a;
+}
+
+a {
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #acbfa3;
+}
+
+.submit-btn {
+    background-color: #acbfa3;
+    border: none;
+    border-radius: 5px;
+    width: 200px;
+    color: white;
+    height: 40px;
+    margin-top: 40px;
+}
+
+.submit-btn:hover {
+    background-color: #999999;
+}
