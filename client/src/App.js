@@ -7,7 +7,7 @@ import "./App.css";
 // import Footer from "./components/Footer";
 // import About from "./components/About";
 import Shop from "./components/Shop";
-import Signup from "./components/Signup";
+// import Signup from "./components/Signup";
 import Trainers from "./components/Trainers";
 import Header from "./components/Header";
 
@@ -19,8 +19,9 @@ function App() {
         <Routes>
           {/* <Route path="/" element={<Hero />} /> */}
           {/* <Route path="/about" element={<About />} /> */}
-          {/* <Route path="/" element={<Login />} /> */}
-          <Route path="/" element={<Signup />} />
+          {/* <Route path="/" element={<Login />} />
+          <Route path="/" element={<Signup />} /> */}
+          <Route path="/" element={<Trainers />} />
         </Routes>
         {/* <Footer /> */}
       </div>
