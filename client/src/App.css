@@ -99,3 +99,49 @@ a:hover {
 .trainers-card:hover {
     transform: scale(1.05);
 }
+
+.shop {
+    text-align: center;
+}
+
+.products-card {
+    border: solid;
+    border-color: #999999;
+    width: 300px;
+    height: 400px;
+    margin: 0, 20px, 20px, 20px;
+    background-color: #efefee;
+    position:relative;
+}
+
+.products-container {
+    display: flex;
+    float: left;
+    flex-wrap: wrap;
+}
+
+.shop-title {
+    margin-bottom: 30px;
+}
+
+.img-container {
+    border: solid;
+    margin: 10px;
+    border-color: #999999;
+    width: 275px;
+    height: 200px;
+    align-items: center;
+}
+
+.cart-btn {
+    background-color: #acbfa3;
+    border: none;
+    border-radius: 5px;
+    width: 200px;
+    color: white;
+    height: 40px;
+}
+
+.cart-btn:hover {
+    background-color: #999999;
+}
