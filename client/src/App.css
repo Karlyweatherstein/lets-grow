@@ -80,8 +80,7 @@ a:hover {
 .trainer-container {
     display: flex;
     float: left;
-    
-
+    flex-wrap: wrap;
 }
 
 .trainers-title {
