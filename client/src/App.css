@@ -6,6 +6,8 @@
 /* About us block color =  #999999 */
 /* Dark green for border box and submit buttons = #acbfa3 */
 
+
+/* login component styles */
 .login {
     text-align: center;
 }
@@ -53,6 +55,7 @@ a:hover {
     background-color: #999999;
 }
 
+/*signup component styles*/
 .signup {
     text-align: center;
 }
@@ -64,6 +67,7 @@ a:hover {
     height: 300px;
 }
 
+/*trainers component styles*/
 .trainers {
     text-align: center;
 }
@@ -100,6 +104,7 @@ a:hover {
     transform: scale(1.05);
 }
 
+/*shop component styles*/
 .shop {
     text-align: center;
 }

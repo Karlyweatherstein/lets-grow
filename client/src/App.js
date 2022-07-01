@@ -19,10 +19,10 @@ function App() {
         <Routes>
           {/* <Route path="/" element={<Hero />} /> */}
           {/* <Route path="/about" element={<About />} /> */}
-          <Route path="/Login" element={<Login />} />
+          {/* <Route path="/" element={<Login />} /> */}
           <Route path="/Signup" element={<Signup />} />
           {/* <Route path="/" element={<Trainers />} /> */}
-          {/* <Route path="/" element={<Shop />} /> */}
+          <Route path="/" element={<Shop />} />
         </Routes>
         {/* <Footer /> */}
       </div>
