@@ -3,22 +3,19 @@ import Email from "../../assets/email-icon.png";
 
 function Footer() {
   return (
-    <footer>
+    <footer className="paragraphFonts">
       <ul>
+        <li>Find us online!</li>
         <li>
           <a href="https://github.com/Karlyweatherstein">
             <i aria-hidden="true"></i>
+            <img className="icons" src={Email} alt="Email"></img>
           </a>
         </li>
         <li>
           <a href="mailto: karlyweatherstein@gmail.com">
             <i aria-hidden="true"></i>
             <img className="icons" src={Email} alt="Email"></img>
-          </a>
-        </li>
-        <li>
-          <a href="https://www.linkedin.com/in/karly-weatherstein-963922137/">
-            <i aria-hidden="true"></i>
           </a>
         </li>
       </ul>

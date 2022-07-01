@@ -4,7 +4,7 @@ import Logo from "../../assets/circle.png";
 
 function Header() {
   return (
-    <nav>
+    <nav className="paragraphFonts">
       <img className="logo" src={Logo} alt="logo"></img>
       <ul>
         {/* Home */}
