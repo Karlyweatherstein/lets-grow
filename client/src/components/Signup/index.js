@@ -4,10 +4,10 @@ function Signup() {
   return (
     <div className="signup">
       <div className="signup-title">
-        <h1>Signup</h1>
+        <h1 className="titleFonts">Signup</h1>
       </div>
 
-      <div className="signup-box mx-auto">
+      <div className="signup-box mx-auto paragraphFonts">
         <input type="text" id="email" placeholder="Enter your email!" />
         <input type="text" id="username" placeholder="Enter your username!" />
         <input type="text" id="password" placeholder="Enter your password!" />
@@ -15,7 +15,7 @@ function Signup() {
           Submit
         </button>
       </div>
-      <div className="community">
+      <div className="community paragraphFonts">
         <h2>
           Already part of the community?
           <a href="/login"> Login!</a>

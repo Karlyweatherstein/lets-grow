@@ -5,9 +5,9 @@ function Trainers() {
   return (
     <div className="trainers">
       <div className="trainers-title">
-        <h1>Meet the Trainers!</h1>
+        <h1 className="titleFonts">Meet the Trainers!</h1>
       </div>
-      <div className="trainer-container">
+      <div className="trainer-container paragraphFonts">
         <div className="trainers-card mx-3">
           <div className="img-container"></div>
           <h3>
