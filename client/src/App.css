@@ -5,7 +5,27 @@
 /* Dark grey text = #5a5a5a */
 /* About us block color =  #999999 */
 /* Dark green for border box and submit buttons = #acbfa3 */
+* { 
+  position: relative;
+}
 
+/* Fonts */
+.paragraphFonts {
+  font-family: 'Lora', serif;
+}
+
+.titleFonts {
+  font-family: 'Nothing You Could Do', cursive;
+}
+
+body {
+  margin: 6px;
+  background-image: url(./assets/background-sm.png);
+  background-size: 100vw;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
 
 /* login component styles */
 .login {
@@ -151,27 +171,7 @@ a:hover {
     background-color: #999999;
 }
 
-* { 
-  position: relative;
-}
 
-/* Fonts */
-.paragraphFonts {
-  font-family: 'Lora', serif;
-}
-
-.titleFonts {
-  font-family: 'Nothing You Could Do', cursive;
-}
-
-body {
-  margin: 6px;
-  background-image: url(./assets/background-sm.png);
-  background-size: 100vw;
-  margin: 0;
-  background-repeat: no-repeat;
-  background-position: bottom;
-}
 
 /* Nav */
 

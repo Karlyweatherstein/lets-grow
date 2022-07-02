@@ -18,14 +18,14 @@ function App() {
       <div className="App background">
         <Header />
         <Routes>
-          {/* <Route path="/" element={<Hero />} /> */}
-          {/* <Route path="/about" element={<About />} /> */}
-          {/* <Route path="/" element={<Login />} /> */}
+          <Route path="/" element={<Hero />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/Login" element={<Login />} />
           <Route path="/Signup" element={<Signup />} />
-          {/* <Route path="/" element={<Trainers />} /> */}
-          <Route path="/" element={<Shop />} />
+          <Route path="/Trainers" element={<Trainers />} />
+          <Route path="/Shop" element={<Shop />} />
         </Routes>
-        {/* <Footer /> */}
+        <Footer />
       </div>
     </Router>
   );
