@@ -88,5 +88,95 @@ db.once('open', async () => {
             price: 60.00,
             quantity: 5
         },
-    ])
-})
+        {
+            // Life-Style
+            name: 'Personal Trainer',
+            description: 'Learn how to use your body in a safe/efficient way! Programming and hands on instruction included.',
+            image:'',
+            category: categories[2]._id,
+            price: 45.00,
+            quantity: 5
+        },
+        {
+            // Life-Style
+            name: 'Nutrition',
+            description: 'Master the culinary arts for the everyday individual. Nutrition is the vital (often missing) piece to achieve the results you are looking for.',
+            image:'',
+            category: categories[2]._id,
+            price: 40.00,
+            quantity: 5
+        },
+        {
+            // Life-Style
+            name: 'Weight-Lifting Coach',
+            description: 'Programming provided with a monthly checkin to fine tune the following months programming. More than just picking things up and putting them back down.',
+            image:'',
+            category: categories[2]._id,
+            price: 80.00,
+            quantity: 5
+        },
+        {
+            // Trade Skills
+            name: 'Computer Science',
+            description: 'Are you stuck on an assignment or project and need some guidance to get over the hump? Tap me in coach because I am ready to help!',
+            image:'',
+            category: categories[3]._id,
+            price: 40.00,
+            quantity: 5
+        },
+        {
+            // Trade Skills
+            name: 'Marketing',
+            description: 'Are you a small business or freelance worker who needs help getting exposure? Let us help you get your name out there without spending more than you need!',
+            image:'',
+            category: categories[3]._id,
+            price: 100.00,
+            quantity: 5
+        },
+        {
+            // Trade Skills
+            name: 'Content Creation',
+            description: 'For the fledgling social media starlet who is trying to get out there. Sign up for best posting practices and trends coming to your platform!',
+            image:'',
+            category: categories[3]._id,
+            price: 80.00,
+            quantity: 5
+        },
+    ]);
+
+    console.log('products seeded!');
+
+    await User.deleteMany();
+
+    await User.create({
+        firstName: 'James',
+        lastName: 'Belk',
+        email: 'jamesbelk@testemail.com',
+        password: 'password12345',
+    });
+
+    await User.create({
+        firstName: 'Karly',
+        lastName: 'Weatherstein',
+        email: 'karlyweatherstein@testemail.com',
+        password: 'password12345',
+    });
+
+    await User.create({
+        firstName: 'Josh',
+        lastName: 'Rodeheaver',
+        email: 'joshrodeheaver@testemail.com',
+        password: 'password12345',
+    });
+
+    await User.create({
+        firstName: 'Alejandro',
+        lastName: 'Restrepo',
+        email: 'alejandrorestrepo@testemail.com',
+        password: 'password12345',
+    });
+
+    console.log('users seeded');
+
+    process.exit();
+});
