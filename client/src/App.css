@@ -5,8 +5,10 @@
 /* Dark grey text = #5a5a5a */
 /* About us block color =  #999999 */
 /* Dark green for border box and submit buttons = #acbfa3 */
-* { 
+
+body {
   position: relative;
+  padding-bottom: 42vh;
 }
 
 /* Fonts */
@@ -24,6 +26,7 @@ body {
   background-size: 100vw;
   margin: 0;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   background-position: bottom;
 }
 
@@ -176,13 +179,12 @@ a:hover {
 /* Nav */
 
 .logo {
-  width: 3vw;
-  margin: 4px 4px 4px 14px;
+  width: 8vw;
+  margin-left: 14px;
 }
 
 nav {
   display: flex;
-  align-items: center;
   justify-content: space-between;
   width: 100%;
   margin: 0;
@@ -193,13 +195,14 @@ nav ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin-right: 20px;
+  margin: 4px 20px 4px 0;
 }
 
 nav ul li {
   padding: 8px;
   margin-right: 14px;
   list-style: none;
+  font-size: larger;
 
 }
 
@@ -209,7 +212,7 @@ a {
 }
 
 .icons {
-  width: 6vw;
+  width: 4vw;
 }
 
 /* Hero */
@@ -218,8 +221,15 @@ a {
   text-align: center;
 }
 
+.dropdown {
+  width: 10%;
+  margin: 14px auto;
+  border-color: #d0dbcb;
+}
 
-
+.hero p {
+  margin: 26px;
+}
 
 /* About */
 
@@ -243,18 +253,16 @@ a {
 
 /* Footer */
 footer {
-  /* position: absolute;
-  bottom: 0; */
-  position: fixed;
+  position: absolute;
   bottom: 0;
   width: 100%;
   height: auto;
-  margin-top: 60px;
+  margin-top: 30px;
 }
 
 footer ul {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 
 }
@@ -263,4 +271,19 @@ footer ul li{
   list-style: none;
   text-decoration: none;
   margin: 0px;
+}
+
+
+/* Mobile responsive */
+@media screen and (max-width: 868px) {
+
+  /* .logo {
+    size: 60vw;
+  } */
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
 }

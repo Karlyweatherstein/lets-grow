@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Select from "react-select";
 
 function Hero() {
@@ -25,22 +25,24 @@ function Hero() {
     },
   ];
 
+  // "result" holds the label value and can be used to route to whatever is selected
+  const [result, categoryVal] = useState("/" + categoryList.label);
+  const categoryValue = (e) => {
+    categoryVal(e.label);
+  };
+  console.log(result);
+
   return (
     <div className="hero">
       <h1 className="titleFonts">Let's Grow!</h1>
-      <div>
-        <button>Select a topic</button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="/fitness">
-            Fitness
-          </a>
-          <a class="dropdown-item" href="/nutrition">
-            Nutrition
-          </a>
-          <a class="dropdown-item" href="/arts">
-            The arts
-          </a>
-        </div>
+      <div className="dropdown">
+        <Select
+          options={categoryList}
+          placeholder="Select a topic!"
+          onChange={categoryValue}
+          className="paragraphFonts"
+          onClick={result}
+        />
       </div>
 
       <p className="paragraphFonts">
