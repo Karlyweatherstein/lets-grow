@@ -5,9 +5,10 @@ db.once('open', async () => {
     await Category.deleteMany();
 
     const categories = await Category.insertMany([
-        { name: 'Tutor' },
-        { name: 'Arts' },
-        { name: 'Life-Style' },
+        { name: 'School' },
+        { name: 'The Arts' },
+        { name: 'Nutrition'},
+        { name: 'Fitness' },
         { name: 'Trade Skills' },
     ]);
 
@@ -89,16 +90,16 @@ db.once('open', async () => {
             quantity: 5
         },
         {
-            // Life-Style
+            // Fitness
             name: 'Personal Trainer',
             description: 'Learn how to use your body in a safe/efficient way! Programming and hands on instruction included.',
             image:'',
-            category: categories[2]._id,
+            category: categories[3]._id,
             price: 45.00,
             quantity: 5
         },
         {
-            // Life-Style
+            // Nutrition
             name: 'Nutrition',
             description: 'Master the culinary arts for the everyday individual. Nutrition is the vital (often missing) piece to achieve the results you are looking for.',
             image:'',
@@ -111,7 +112,7 @@ db.once('open', async () => {
             name: 'Weight-Lifting Coach',
             description: 'Programming provided with a monthly checkin to fine tune the following months programming. More than just picking things up and putting them back down.',
             image:'',
-            category: categories[2]._id,
+            category: categories[3]._id,
             price: 80.00,
             quantity: 5
         },
@@ -120,7 +121,7 @@ db.once('open', async () => {
             name: 'Computer Science',
             description: 'Are you stuck on an assignment or project and need some guidance to get over the hump? Tap me in coach because I am ready to help!',
             image:'',
-            category: categories[3]._id,
+            category: categories[4]._id,
             price: 40.00,
             quantity: 5
         },
@@ -129,7 +130,7 @@ db.once('open', async () => {
             name: 'Marketing',
             description: 'Are you a small business or freelance worker who needs help getting exposure? Let us help you get your name out there without spending more than you need!',
             image:'',
-            category: categories[3]._id,
+            category: categories[4]._id,
             price: 100.00,
             quantity: 5
         },
@@ -138,7 +139,7 @@ db.once('open', async () => {
             name: 'Content Creation',
             description: 'For the fledgling social media starlet who is trying to get out there. Sign up for best posting practices and trends coming to your platform!',
             image:'',
-            category: categories[3]._id,
+            category: categories[4]._id,
             price: 80.00,
             quantity: 5
         },
