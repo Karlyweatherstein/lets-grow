@@ -1,5 +1,6 @@
 import React from "react";
 import Email from "../../assets/email-icon.png";
+import Insta from "../../assets/insta-icon.png";
 
 function Footer() {
   return (
@@ -9,7 +10,7 @@ function Footer() {
         <li>
           <a href="https://github.com/Karlyweatherstein">
             <i aria-hidden="true"></i>
-            <img className="icons" src={Email} alt="Email"></img>
+            <img className="icons" src={Insta} alt="insta"></img>
           </a>
         </li>
         <li>
