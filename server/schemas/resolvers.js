@@ -3,7 +3,7 @@ const { Category, Order, Product, User } = require("../models");
 const { signToken } = require("../utils/auth");
 const stripe = require('stripe')('api key here');
 
-const resolver = {
+const resolvers = {
   Query: {
     categories: async () => {
       return await Category.find();
