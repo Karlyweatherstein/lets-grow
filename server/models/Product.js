@@ -4,38 +4,38 @@ const { Schema } = mongoose;
 const productSchema = new Schema({ 
     name: {
         type: String,
-        require: true,
+        required: true,
         trim: true
-    },
-    description: {
-        type: String,
-        require: true,
-        trim: true
-    },
-    image_price: {
-        type: String,
-        require: true,
-        trim: true
-    },
-    category: {
-        type: String,
-        require: true,
-        trim: true
-    },
+      },
+      description: {
+        type: String
+      },
+      image: {
+        type: String
+      },
+      price: {
+        type: Number,
+        required: true,
+        min: 0.99
+      },
+      quantity: {
+        type: Number,
+        min: 0,
+        default: 5
+      },
+      category: {
+        type: Schema.Types.ObjectId,
+        ref: 'Category',
+        required: true
+      }
+ });
 
 
 
 
 
 
- })
 
 
 
-
-
-
-
-
-
-module.exports = Product;
+module.exports = Product
