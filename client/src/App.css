@@ -150,3 +150,117 @@ a:hover {
 .cart-btn:hover {
     background-color: #999999;
 }
+
+* { 
+  position: relative;
+}
+
+/* Fonts */
+.paragraphFonts {
+  font-family: 'Lora', serif;
+}
+
+.titleFonts {
+  font-family: 'Nothing You Could Do', cursive;
+}
+
+body {
+  margin: 6px;
+  background-image: url(./assets/background-sm.png);
+  background-size: 100vw;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+/* Nav */
+
+.logo {
+  width: 3vw;
+  margin: 4px 4px 4px 14px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0;
+}
+
+nav ul {
+  color: #b3beb3;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-right: 20px;
+}
+
+nav ul li {
+  padding: 8px;
+  margin-right: 14px;
+  list-style: none;
+
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.icons {
+  width: 6vw;
+}
+
+/* Hero */
+.hero{
+  align-items: center;
+  text-align: center;
+}
+
+
+
+
+/* About */
+
+.about-box {
+  background-color: #999999;
+  color: #d0dbcb;
+  margin: 0 15vw 0 15vw;
+  align-items: center;
+}
+
+.about-box p {
+  padding: 12px;
+}
+
+.about h1{
+  text-align: center;
+  font-size: 5vh;
+  margin: 40px;
+}
+
+
+/* Footer */
+footer {
+  /* position: absolute;
+  bottom: 0; */
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  margin-top: 60px;
+}
+
+footer ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+footer ul li{
+  list-style: none;
+  text-decoration: none;
+  margin: 0px;
+}
