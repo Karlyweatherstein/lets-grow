@@ -30,7 +30,11 @@ type Order {
 
 type Checkout {
     session: ID
+<<<<<<< HEAD
 }
+=======
+  }
+>>>>>>> fd11380288e9a5a7d3b8f146626ce0bbc7ded982
 
 type Auth {
     token: ID
@@ -42,7 +46,11 @@ type Query {
     categories: [Category]
     products(category: ID, name: String): [Product]
     product(_id: ID!): Product
+<<<<<<< HEAD
     order (_id: ID!): Order
+=======
+    order(_id: ID!): Order
+>>>>>>> fd11380288e9a5a7d3b8f146626ce0bbc7ded982
     checkout(session: ID!): Checkout
 }
 
