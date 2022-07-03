@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Reducer } from "react";
 import { renderMatches } from "react-router-dom";
 import Select from "react-select";
+import { reducer } from "../../App";
 
 function Hero() {
   const categoryList = [
@@ -27,29 +28,27 @@ function Hero() {
   ];
 
   // // "result" holds the label value and can be used to route to whatever is selected
-  const [result, categoryVal] = useState("categoryOpt");
+  const [result, categoryVal] = useState(categoryList.label);
   const categoryValue = (e) => {
-    categoryVal(e.target.value);
+    categoryVal(e.label);
   };
   console.log(result);
 
-  const [fitnessVisible, setFitnessVisible] = useState(false);
-  const [nutritionVisible, setNutritionVisible] = useState(false);
-  const [theArtsVisible, setTheArtsVisible] = useState(false);
-  const [schoolVisible, setSchoolVisible] = useState(false);
-  const [marketingVisible, setMarketingVisible] = useState(false);
+  if (result === "Fitness") {
+    reducer();
+  }
 
-  useEffect(() => {
-    result === "fitness" ? setFitnessVisible(true) : setFitnessVisible(false);
-    result === "nutrition"
-      ? setNutritionVisible(true)
-      : setNutritionVisible(false);
-    result === "school" ? setSchoolVisible(true) : setSchoolVisible(false);
-    result === "theArts" ? setTheArtsVisible(true) : setTheArtsVisible(false);
-    result === "marketing"
-      ? setMarketingVisible(true)
-      : setMarketingVisible(false);
-  }, [result]);
+  // useEffect(() => {
+  //   result === "Fitness" ? setFitnessVisible(true) : setFitnessVisible(false);
+  //   result === "Nutrition"
+  //     ? setNutritionVisible(true)
+  //     : setNutritionVisible(false);
+  //   result === "School" ? setSchoolVisible(true) : setSchoolVisible(false);
+  //   result === "The Arts" ? setTheArtsVisible(true) : setTheArtsVisible(false);
+  //   result === "Marketing"
+  //     ? setMarketingVisible(true)
+  //     : setMarketingVisible(false);
+  // }, [result]);
 
   return (
     <div className="hero">
