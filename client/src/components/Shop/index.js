@@ -1,11 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 function Shop() {
   return (
     <div className="shop">
-      {/* Filter through categories */}
-      {/* <Link to="/Fitness"></Link> */}
       <div className="shop-title">
         <h1 className="titleFonts">Slim Shady's Shop</h1>
         <h3 className="paragraphFonts">
