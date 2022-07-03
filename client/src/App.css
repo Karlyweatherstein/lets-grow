@@ -6,9 +6,20 @@
 /* About us block color =  #999999 */
 /* Dark green for border box and submit buttons = #acbfa3 */
 
+
 body {
   position: relative;
-  padding-bottom: 42vh;
+  margin: 6px;
+  background-image: url(./assets/background-sm.png);
+  background-size: 100vw;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: bottom;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 3rem;
 }
 
 /* Fonts */
@@ -20,15 +31,6 @@ body {
   font-family: 'Nothing You Could Do', cursive;
 }
 
-body {
-  margin: 6px;
-  background-image: url(./assets/background-sm.png);
-  background-size: 100vw;
-  margin: 0;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: bottom;
-}
 
 /* login component styles */
 .login {
@@ -257,7 +259,6 @@ footer {
   bottom: 0;
   width: 100%;
   height: auto;
-  margin-top: 30px;
 }
 
 footer ul {
@@ -270,7 +271,7 @@ footer ul {
 footer ul li{
   list-style: none;
   text-decoration: none;
-  margin: 0px;
+ 
 }
 
 
