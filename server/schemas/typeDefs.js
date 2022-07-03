@@ -12,7 +12,7 @@ type User {
 type Product {
     _id: ID
     name: String
-    description: Stringimage: String
+    description: String
     quantity: Int
     price: Float
     category: Category
@@ -29,6 +29,10 @@ type Order {
     products: [Product]
 }
 
+type Checkout {
+    session: ID
+  }
+
 type Auth {
     token: ID
     user: User
@@ -39,6 +43,8 @@ type Query {
     categories: [Category]
     products(category: ID, name: String): [Product]
     product(_id: ID!): Product
+    order(_id: ID!): Order
+    checkout(session: ID!): Checkout
 }
 
 type Mutation {
@@ -48,6 +54,6 @@ type Mutation {
     updateProduct(_id: ID!, quantity: Int!): Product
     login(email: String!, password: String!): Auth 
 }
-;`
+`;
 
 module.exports = typeDefs;
