@@ -22,6 +22,14 @@ type Category {
     name: String 
 }
 
+type Trainer {
+    _id: ID
+    name: String
+    description: String
+    products: [Product]
+    category: Category
+}
+
 type Order {
     _id: ID
     purchaseDate: String

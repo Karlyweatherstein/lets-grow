@@ -1,7 +1,24 @@
 const db = require('./connection');
 const { User, Product, Category } = require('../models');
+const { default: Trainers } = require('../../client/src/components/Trainers');
 
 db.once('open', async () => {
+
+    await Trainer.deleteMany();
+    const trainers = await Trainer.insertMany([
+        { 
+            name: 'James Belk',
+            description: 'CrossFit Level 2 instructor with many years under my belt. Here to help you achieve your fitness goals! With a little coding on the side if needed...',
+            image:'',
+            category: categories[0, 4]._id,
+            products: [
+                 'Personal Trainer', 'Weightlifting Coach', 'Computer Science Tutor'
+            ]
+        },
+    ]);
+
+    console.log('trainers seeded');
+
     await Category.deleteMany();
 
     const categories = await Category.insertMany([
@@ -28,8 +45,8 @@ db.once('open', async () => {
         },
         {
             // Fitness
-            name: 'Weight-Lifting Coach',
-            description: 'Programming provided with a monthly checkin to fine tune the following months programming. More than just picking things up and putting them back down.',
+            name: 'Weightlifting Coach',
+            description: 'Programming provided with a monthly check-in to fine tune the following months programming. More than just picking things up and putting them back down.',
             image:'',
             category: categories[0]._id,
             price: 80.00,
@@ -46,7 +63,7 @@ db.once('open', async () => {
         },
         {
             // Arts
-            name: 'Sheet Music/Band Asistance',
+            name: 'Sheet Music/Band Assistance',
             description: 'Learn the art of reading music and how to bridge the gap between sheet music and your instrument!',
             image:'',
             category: categories[2]._id,
@@ -56,7 +73,7 @@ db.once('open', async () => {
         {
             // Arts
             name: 'Choral Coach',
-            description: 'Learn to properly warm up your vocal chords, harmonies, and carry a tune in a bucket full of holes! (not a mircale worker however)',
+            description: 'Learn to properly warm up your vocal chords, harmonies, and carry a tune in a bucket full of holes! (not a miracle worker however)',
             image:'',
             category: categories[2]._id,
             price: 30.00,
@@ -83,7 +100,7 @@ db.once('open', async () => {
         {
             // School
             name: 'Math Tutor',
-            description: 'Here to help with all your athrithmatic needs!',
+            description: 'Here to help with all your arithmetic needs!',
             image:'',
             category: categories[3]._id,
             price: 40.00,
