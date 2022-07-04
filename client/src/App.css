@@ -9,10 +9,9 @@
 
 body {
   position: relative;
-  margin: 6px;
+  margin: 0;
   background-image: url(./assets/background-sm.png);
   background-size: 100vw;
-  margin: 0;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: bottom;
@@ -75,6 +74,16 @@ a:hover {
     color: white;
     height: 40px;
     margin-top: 40px;
+}
+
+.submit-button {
+  background-color: #acbfa3;
+  border: none;
+  border-radius: 5px;
+  width: 150px;
+  color: white;
+  height: 30px;
+  margin-top: 10px;
 }
 
 .submit-btn:hover {
@@ -224,11 +233,34 @@ a {
   text-align: center;
 }
 
-.dropdown {
-  width: 10%;
-  margin: 14px auto;
-  border-color: #d0dbcb;
+.subjectSelect {
+  align-items: center;
+  margin: 0 auto;
+  justify-content: space-around;
+  width: 100%;
 }
+
+.subjectBtn {
+  display: flex;
+
+}
+
+.subjectBtn button {
+  margin: 8px;
+  border: 1px solid #d0dbcb;
+  background-color: white;
+  color: #5a5a5a;
+  border-radius: 0;
+  box-shadow: 0 0px 6px rgb(79, 81, 77);
+
+}
+
+.subjectBtn button:hover {
+  background-color: #acbfa3;
+  color: white;
+}
+
+
 
 .hero p {
   margin: 26px;
@@ -256,7 +288,7 @@ a {
 
 /* Footer */
 footer {
-  position: fixed;
+  position: absolute;
   bottom: 0;
   width: 100%;
   height: auto;
@@ -302,8 +334,8 @@ footer ul li{
 
   }
 
-  .dropdown {
-    width: 30%;
+  .subjectSelect {
+    display: inline-block;
   }
 
 
@@ -338,8 +370,8 @@ footer ul li{
     margin: 18px auto;
   }
 
-  .dropdown {
-    width: 50%;
+  .subjectSelect {
+    display: inline;
   }
   
 }
