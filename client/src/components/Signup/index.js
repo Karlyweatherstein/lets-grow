@@ -58,7 +58,7 @@ function Signup() {
             placeholder="Enter your password!"
             onChange={handleChange}
           />
-          <button type="submit" id="submit-btn" class="submit-btn">
+          <button type="submit" id="submit-btn" className="submit-btn">
             Submit
           </button>
         </form>
