@@ -30,15 +30,6 @@ const productSchema = new Schema({
       }
  });
 
-<<<<<<< HEAD
-=======
-
-
-
-
-
-
->>>>>>> fd11380288e9a5a7d3b8f146626ce0bbc7ded982
  const Product = mongoose.model('Product', productSchema);
 
 module.exports = Product

@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { useMutation } from "@apollo/client";
 import { ADD_USER } from "../../utils/mutations";
 import Auth from "../../utils/auth";
+import { Link } from 'react-router-dom';
+
 
 function Signup() {
   const [formState, setFormState] = useState({
@@ -67,7 +69,7 @@ function Signup() {
       <div className="community paragraphFonts">
         <h2>
           Already part of the community?
-          <a href="/login"> Login!</a>
+          <Link to="/login"> Login!</Link>
         </h2>
       </div>
     </div>
