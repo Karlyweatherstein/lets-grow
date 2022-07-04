@@ -1,4 +1,4 @@
-import React, { useState, useReducer } from "react";
+import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import {
   ApolloClient,
@@ -17,10 +17,13 @@ import Hero from "./components/Hero";
 import Footer from "./components/Footer";
 import About from "./components/About";
 import Header from "./components/Header";
+import Fitness from "./components/Trainers/Fitness";
+import Nutrition from "./components/Trainers/Nutrition";
+import TheArts from "./components/Trainers/TheArts";
+import School from "./components/Trainers/School";
+import Marketing from "./components/Trainers/Marketing";
+import Crafts from "./components/Trainers/Crafts";
 
-export function reducer(state, action) {
-  return { fitnessVisible: true };
-}
 const httpLink = createHttpLink({
   uri: "/graphql",
 });
@@ -41,17 +44,6 @@ const client = new ApolloClient({
 });
 
 function App() {
-  // const [result, categoryVal] = useState("categoryOpt");
-  // console.log(result);
-
-  const [state, dispatch] = useReducer(reducer, { fitnessVisible: false });
-
-  const [fitnessVisible, setFitnessVisible] = useState(false);
-  const [nutritionVisible, setNutritionVisible] = useState(false);
-  const [theArtsVisible, setTheArtsVisible] = useState(false);
-  const [schoolVisible, setSchoolVisible] = useState(false);
-  const [marketingVisible, setMarketingVisible] = useState(false);
-
   return (
     <ApolloProvider client={client}>
       <Router>
@@ -65,13 +57,13 @@ function App() {
               <Route path="/signup" element={<Signup />} />
               <Route path="/trainers" element={<Trainers />} />
               <Route path="/shop" element={<Shop />} />
+              <Route path="/fitness" element={<Fitness />} />
+              <Route path="/nutrition" element={<Nutrition />} />
+              <Route path="/theArts" element={<TheArts />} />
+              <Route path="/school" element={<School />} />
+              <Route path="/marketing" element={<Marketing />} />
+              <Route path="/crafts" element={<Crafts />} />
             </Routes>
-            {fitnessVisible && <Shop />}
-            {nutritionVisible && <Shop />}
-            {schoolVisible && <Shop />}
-            {marketingVisible && <Shop />}
-            {theArtsVisible && <Shop />}
-
             <Footer />
           </StoreProvider>
         </div>
