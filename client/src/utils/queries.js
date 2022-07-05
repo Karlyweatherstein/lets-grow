@@ -67,3 +67,24 @@ export const QUERY_USER = gql`
     }
   }
 `;
+
+export const QUERY_TRAINER = gql`
+  {
+    categories {
+      _id
+      name
+      trainer {
+        name
+        description
+        products {
+          _id
+          name 
+          description
+          price
+          quantity
+          image
+        }
+      }
+    }
+  }
+`;

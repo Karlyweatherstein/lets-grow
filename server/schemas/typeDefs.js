@@ -19,7 +19,17 @@ type Product {
 
 type Category {
     _id: ID
-    name: String 
+    name: String
+    trainer: [Trainer]
+}
+
+type Trainer {
+    _id: ID
+    name: String
+    description: String
+    image: String
+    products: [Product]
+    category: [Category]
 }
 
 type Order {
@@ -44,6 +54,8 @@ type Query {
     product(_id: ID!): Product
     order(_id: ID!): Order
     checkout(session: ID!): Checkout
+    pathway(category: ID, name: String, _id: ID): [Trainer]
+    
 }
 
 type Mutation {
