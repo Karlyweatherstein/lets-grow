@@ -334,7 +334,7 @@ footer ul li{
 
   }
 
-  .subjectSelect {
+  .subjectBtn {
     display: inline-block;
   }
 
@@ -370,7 +370,7 @@ footer ul li{
     margin: 18px auto;
   }
 
-  .subjectSelect {
+  .subjectBtn {
     display: inline;
   }
   

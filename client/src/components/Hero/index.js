@@ -2,36 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 function Hero() {
-  // const categoryList = [
-  //   {
-  //     value: "fitness",
-  //     label: "Fitness",
-  //   },
-  //   {
-  //     value: "nutrition",
-  //     label: "Nutrition",
-  //   },
-  //   {
-  //     value: "theArts",
-  //     label: "The Arts",
-  //   },
-  //   {
-  //     value: "school",
-  //     label: "School",
-  //   },
-  //   {
-  //     value: "marketing",
-  //     label: "Marketing",
-  //   },
-  // ];
-
-  // // "result" holds the label value and can be used to route to whatever is selected
-  // const [result, categoryVal] = useState(categoryList.label);
-  // const categoryValue = (e) => {
-  //   categoryVal(e.label);
-  // };
-  // console.log(result);
-
   return (
     <div className="hero">
       <h1 className="titleFonts">Let's Grow!</h1>
