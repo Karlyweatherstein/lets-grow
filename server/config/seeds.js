@@ -175,7 +175,7 @@ db.once('open', async () => {
             description: 'Here to help you reach all of your fitness dreams!',
             image: 'placeholder',
             products: [products[0]._id, products[1]._id, products[15]._id],
-            category: [categories[0]._id, categories[6]._id]
+            category: [categories[0]._id, categories[5]._id]
         },
         { 
             name: 'Eddie Coan',

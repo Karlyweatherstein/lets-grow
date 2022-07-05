@@ -54,6 +54,8 @@ type Query {
     product(_id: ID!): Product
     order (_id: ID!): Order
     checkout(session: ID!): Checkout
+    pathway(category: ID, name: String, _id: ID): [Trainer]
+    
 }
 
 type Mutation {
