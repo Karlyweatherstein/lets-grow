@@ -9,7 +9,6 @@
 
 body {
   position: relative;
-  margin: 6px;
   background-image: url(./assets/background-sm.png);
   background-size: 100vw;
   margin: 0;
@@ -256,7 +255,7 @@ a {
 
 /* Footer */
 footer {
-  position: fixed;
+  position: absolute;
   bottom: 0;
   width: 100%;
   height: auto;
