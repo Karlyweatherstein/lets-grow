@@ -30,7 +30,7 @@ function Trainers() {
     }
   }, [data, loading, dispatch]);
 
-  function filterProducts() {
+  function filterCategory() {
     if (!currentCategory) {
       return state.products;
     }
@@ -48,6 +48,22 @@ function Trainers() {
       <div className="trainer-container paragraphFonts">
         <div className="trainers-card mx-3">
           <div className="img-container"></div>
+          {/* {state.products.length ? (
+              <div className="flex-row">
+                  {filterCategory().map((product) => (
+                      <Trainers
+                      key={product,_id}
+                      _id={product,_id}
+                      image={product,image}
+                      name={product.name}
+                      price={product.price}
+                      quantity={product.quantity}
+                      />
+                  ))}
+              </div>
+          ) : (
+              <h3></h3>
+          )} */}
           <h3>
             Hi my name is who, my name is what, my name is chicka chicka slim
             shady
