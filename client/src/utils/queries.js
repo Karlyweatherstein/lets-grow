@@ -16,6 +16,25 @@ export const QUERY_PRODUCTS = gql`
   }
 `;
 
+export const QUERY_TRAINERS = gql`
+  {
+    categories {
+      name
+      trainer {
+        name
+        description
+        products {
+          name
+          description
+          price
+          quantity
+          image
+        }
+      }
+    }
+  }
+`;
+
 export const QUERY_CHECKOUT = gql`
   query getCheckout($products: [ID]!) {
     checkout(products: $products) {
@@ -78,7 +97,7 @@ export const QUERY_TRAINER = gql`
         description
         products {
           _id
-          name 
+          name
           description
           price
           quantity

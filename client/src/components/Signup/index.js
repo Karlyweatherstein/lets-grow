@@ -2,13 +2,10 @@ import React, { useState } from "react";
 import { useMutation } from "@apollo/client";
 import { ADD_USER } from "../../utils/mutations";
 import Auth from "../../utils/auth";
+import { Link } from 'react-router-dom';
 
 function Signup() {
-  const [formState, setFormState] = useState({
-    email: "",
-    username: "",
-    password: "",
-  });
+  const [formState, setFormState] = useState({ email: '', password: '' });
   const [addUser] = useMutation(ADD_USER);
 
   const handleFormSubmit = async (event) => {
@@ -16,8 +13,9 @@ function Signup() {
     const mutationResponse = await addUser({
       variables: {
         email: formState.email,
-        username: formState.username,
         password: formState.password,
+        username: formState.username,
+        
       },
     });
     const token = mutationResponse.data.addUser.token;
@@ -33,43 +31,45 @@ function Signup() {
   };
 
   return (
-    <div className="signup">
-      <div className="signup-title">
-        <h1 className="titleFonts">Signup</h1>
-      </div>
+    <div className="container my-1">
+      <Link to="/login">← Go to Login</Link>
 
-      <div className="signup-box mx-auto paragraphFonts">
-        <form onSubmit={handleFormSubmit}>
+      <h2>Sign Up</h2>
+      <form onSubmit={handleFormSubmit}>
+        <div className="flex-row space-between my-2">
+          <label htmlFor="username">User Name:</label>
           <input
-            type="text"
-            id="email"
-            placeholder="Enter your email!"
-            onChange={handleChange}
-          />
-          <input
-            type="text"
+            placeholder="First"
+            name="username"
+            type="username"
             id="username"
-            placeholder="Enter your username!"
             onChange={handleChange}
           />
+        </div>
+        <div className="flex-row space-between my-2">
+          <label htmlFor="email">Email:</label>
           <input
-            type="text"
-            id="password"
-            placeholder="Enter your password!"
+            placeholder="youremail@test.com"
+            name="email"
+            type="email"
+            id="email"
             onChange={handleChange}
           />
-          <button type="submit" id="submit-btn" className="submit-btn">
-            Submit
-          </button>
-        </form>
-      </div>
-
-      <div className="community paragraphFonts">
-        <h2>
-          Already part of the community?
-          <a href="/login"> Login!</a>
-        </h2>
-      </div>
+        </div>
+        <div className="flex-row space-between my-2">
+          <label htmlFor="pwd">Password:</label>
+          <input
+            placeholder="******"
+            name="password"
+            type="password"
+            id="pwd"
+            onChange={handleChange}
+          />
+        </div>
+        <div className="flex-row flex-end">
+          <button type="submit">Submit</button>
+        </div>
+      </form>
     </div>
   );
 }

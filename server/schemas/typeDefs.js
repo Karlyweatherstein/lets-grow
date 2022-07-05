@@ -28,7 +28,7 @@ type Trainer {
     name: String
     description: String
     image: String
-    products: [Product]
+    product: [Product]
     category: [Category]
 }
 

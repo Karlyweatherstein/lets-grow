@@ -9,11 +9,7 @@
 
 body {
   position: relative;
-<<<<<<< HEAD
   margin: 0px;
-=======
-  margin: 0;
->>>>>>> d5c5304787f498c01d88af12c27659e378f4e93d
   background-image: url(./assets/background-sm.png);
   background-size: 100vw;
   background-repeat: no-repeat;

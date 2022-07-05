@@ -1,38 +1,48 @@
 import React from 'react';
+import { useQuery } from '@apollo/client';
+import { QUERY_TRAINER } from '../../utils/queries';
 import { Link } from 'react-router-dom';
 import { pluralize } from '../../utils/helpers';
-import { useStoreContext } from '../../utils/GlobalState';
-import { ADD_TO_CART, UPDATE_CART_QUANTITY } from '../../utils/actions';
-import { idbPromise } from '../../utils/helpers';
+
+import { useStoreContext } from "../../utils/GlobalState";
+import { ADD_TO_CART, UPDATE_CART_QUANTITY } from "../../utils/actions";
+import { idbPromise } from "../../utils/helpers";
+
 
 function Shop(item) {
+  const { data } = useQuery(QUERY_TRAINER);
+
   const [state, dispatch] = useStoreContext();
 
-  const { image, name, _id, price, quantity } = item;
+  const {
+    image,
+    _id,
+    quantity,
+    price
+  } = item;
 
-  const { cart } = state;
+  const { cart } = state
 
   const addToCart = () => {
-    const itemInCart = cart.find((cartItem) => cartItem._id === _id);
+    const itemInCart = cart.find((cartItem) => cartItem._id === _id)
     if (itemInCart) {
       dispatch({
         type: UPDATE_CART_QUANTITY,
         _id: _id,
-        purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1,
+        purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1
       });
       idbPromise('cart', 'put', {
         ...itemInCart,
-        purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1,
+        purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1
       });
     } else {
       dispatch({
         type: ADD_TO_CART,
-        product: { ...item, purchaseQuantity: 1 },
+        product: { ...item, purchaseQuantity: 1 }
       });
       idbPromise('cart', 'put', { ...item, purchaseQuantity: 1 });
     }
-  };
-
+  }
   return (
     <div className='shop'>
       <div className='shop-title'>
@@ -47,9 +57,9 @@ function Shop(item) {
       <div className='products-container paragraphFonts'>
         <div className='products-card mx-3'>
           <div className='img-container'>
-            <Link to={`/products/${_id}`}>
-              <img alt={name} src={`/images/${image}`} />
-              <h3>{name}</h3>
+            <Link to={`/shop/${_id}`}>
+              <img alt={image} src={`/images/${image}`} />
+              <h3>{}</h3>
             </Link>
           </div>
           <div>
@@ -58,7 +68,7 @@ function Shop(item) {
             </div>
             <span>${price}</span>
           </div>
-          <button onClick={addToCart} id='cart-btn' class='cart-btn'>
+          <button onClick={addToCart} id='cart-btn' className='cart-btn'>
             Add to cart
           </button>
         </div>
