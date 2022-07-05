@@ -4,6 +4,7 @@ import { ADD_USER } from "../../utils/mutations";
 import Auth from "../../utils/auth";
 import { Link } from 'react-router-dom';
 
+//const path = require('path');
 
 function Signup() {
   const [formState, setFormState] = useState({
@@ -17,9 +18,9 @@ function Signup() {
     event.preventDefault();
     const mutationResponse = await addUser({
       variables: {
-        email: formState.email,
-        username: formState.username,
-        password: formState.password,
+        email: /*path.*/formState.email,
+        username: /*path.*/formState.username,
+        password: /*path.*/formState.password,
       },
     });
     const token = mutationResponse.data.addUser.token;

@@ -7,6 +7,8 @@ import AuthService from '../../utils/auth';
 // import { LOGIN_USER } from '../../utils/mutations';
 // import Auth from '../../utils/auth';
 
+//const path = require('path');
+
 function Login(props) {
 
   const [formState, setFormState] = useState({ email: '', password: '' });
