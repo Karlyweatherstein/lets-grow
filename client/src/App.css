@@ -122,6 +122,15 @@ a:hover {
     background-color: #efefee;
 }
 
+.trainers-card-shop {
+    border: solid;
+    border-color: #999999;
+    width: 300px;
+    height: 510px;
+    margin: 0, 20px, 20px, 20px;
+    background-color: #efefee;
+}
+
 .trainer-container {
     display: flex;
     justify-content: center;
