@@ -103,6 +103,11 @@ a:hover {
 }
 
 /*trainers component styles*/
+
+.trainers li {
+    list-style: none;
+    margin-bottom: 10px;
+}
 .trainers {
     text-align: center;
 }
