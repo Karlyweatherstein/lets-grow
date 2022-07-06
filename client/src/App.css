@@ -110,6 +110,7 @@ a:hover {
 }
 .trainers {
     text-align: center;
+    align-items: center;
 }
 
 .trainers-card {
@@ -123,7 +124,7 @@ a:hover {
 
 .trainer-container {
     display: flex;
-    float: left;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
