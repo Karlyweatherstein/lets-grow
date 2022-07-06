@@ -27,15 +27,16 @@ export const QUERY_TRAINERS = gql`
 `;
 
 export const QUERY_TRAINER_PRODUCTS = gql`
-{
-  trainer {
-    name 
+query Query($id: ID!) {
+  trainer(_id: ID) {
+    name
     description
+    image
     products {
       name
       description
-      price
       quantity
+      price
       image
     }
   }

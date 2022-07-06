@@ -52,7 +52,7 @@ type Query {
     user: User
     categories: [Category]
     products(category: ID, name: String): [Product]
-    product(_id: ID!): Product
+    product(_id: ID): Product
     order (_id: ID!): Order
     checkout(session: ID!): Checkout
     trainers: [Trainer]

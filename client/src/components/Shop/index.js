@@ -2,22 +2,20 @@ import React from 'react';
 import ShopItem from '../ShopItem';
 import { useQuery } from '@apollo/client';
 import { QUERY_TRAINER_PRODUCTS } from '../../utils/queries';
-import { Link } from 'react-router-dom';
 import { pluralize } from '../../utils/helpers';
 import { useStoreContext } from "../../utils/GlobalState";
 import { ADD_TO_CART, UPDATE_CART_QUANTITY } from "../../utils/actions";
 import { idbPromise } from "../../utils/helpers";
 
-
-
-
 function Shop(item) {
-  const {  loading, data } = useQuery(QUERY_TRAINER_PRODUCTS);
-  console.log('products', data);
 
+  const {  data, loading, error } = useQuery(QUERY_TRAINER_PRODUCTS);
+  console.log({error, loading, data });
+  
   const [state, dispatch] = useStoreContext();
 
   const {
+    name,
     image,
     _id,
     quantity,
@@ -46,28 +44,30 @@ function Shop(item) {
       });
       idbPromise('cart', 'put', { ...item, purchaseQuantity: 1 });
     }
-  }
+  } 
+  
   return (
-    
- 
+
         <div className='shop'>
-        <div> className='shop-title'>
-            <h1 className='titleFonts'>{data.trainer.name}</h1>
+          
+        <div className='shop-title'>
+            <h1 className='titleFonts'>{name}</h1>
             <h3 className='paragraphFonts'>
-                          {data.trainer.description}
+                          {description}
             </h3>
          </div>   {data ? ( 
           <div className='products-container paragraphFonts' >
             <div className='products-card mx-3'>
               <div className='img-container'>
-              {data.products.map((trainer) => (
-            <ShopItem
-              key={trainer._id}
-              _id={trainer._id}
-              image={trainer.image}
-              name={trainer.name}
-              description={trainer.description}
+              {data.trainers.map((trainer) => (
+              <ShopItem
+              key={_id}
+              _id={_id}
+              image={image}
+              name={name}
+              description={description}
             />
+            
           ))}
                   {quantity} {pluralize('item', quantity)} in stock
                 </div>
@@ -78,7 +78,7 @@ function Shop(item) {
               </button>
             </div>
             ) : (
-              <h3>You haven't added any trainer yet!</h3>
+              <h3>You haven't added any products yet!</h3>
             )}
             {loading ? <img src='' alt="loading" /> : null}
           </div>

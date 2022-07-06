@@ -6,7 +6,10 @@ const stripe = require('stripe')('sk_test_51LHAZTE7UUC0twcLLwlI9Sr68vKMF8A63dDYV
 const resolvers = {
   Query: {
     trainers: async() => {
-      return Trainer.find()
+      return Trainer.find().populate("products").populate({
+        path: 'products',
+        populate: 'category',
+      });
     },
     trainer: async (parent, { _id }) => {
       return await Trainer.findById(_id).populate("products").populate({

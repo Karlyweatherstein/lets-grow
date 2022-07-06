@@ -25,7 +25,7 @@ import Header from "./components/Header";
 // import Crafts from "./components/Trainers/Crafts";
 
 const httpLink = createHttpLink({
-  uri: "/graphql",
+  uri: "http://localhost:3001/graphql",
 });
 
 const authLink = setContext((_, { headers }) => {

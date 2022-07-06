@@ -3,11 +3,9 @@ import TrainerCard from "../TrainerCard";
 import { useQuery } from '@apollo/client';
 import { QUERY_TRAINERS } from '../../utils/queries';
 
-function Trainers() {
+function Trainers(item) {
   const { loading, data } = useQuery(QUERY_TRAINERS);
   console.log('hello world', data)
-
-
 
   return (
 
