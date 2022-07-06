@@ -9,7 +9,9 @@ import { QUERY_CHECKOUT } from "../../utils/queries";
 import { loadStripe } from "@stripe/stripe-js";
 import { useLazyQuery } from "@apollo/client";
 
-const stripePromise = loadStripe("sk_test_51LHAZTE7UUC0twcLLwlI9Sr68vKMF8A63dDYVbr794se4J0IjzIj5PTZO7ry0Moa7sbqGXWOHKDnLRRODLjaK9YT00agJoSm9n");
+const stripePromise = loadStripe(
+  "sk_test_51LHAZTE7UUC0twcLLwlI9Sr68vKMF8A63dDYVbr794se4J0IjzIj5PTZO7ry0Moa7sbqGXWOHKDnLRRODLjaK9YT00agJoSm9n"
+);
 const Cart = () => {
   const [state, dispatch] = useStoreContext();
   const [getCheckout, { data }] = useLazyQuery(QUERY_CHECKOUT);
