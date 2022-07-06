@@ -9,7 +9,7 @@
 
 body {
   position: relative;
-  margin: 0px;
+  margin: 0;
   background-image: url(./assets/background-sm.png);
   background-size: 100vw;
   background-repeat: no-repeat;
@@ -103,6 +103,11 @@ a:hover {
 }
 
 /*trainers component styles*/
+
+.trainers li {
+    list-style: none;
+    margin-bottom: 10px;
+}
 .trainers {
     text-align: center;
 }
@@ -241,30 +246,43 @@ a {
 }
 
 .subjectBtn {
-  display: flex;
   justify-content: center;
-
 }
 
 .subjectBtn button {
-  margin: 8px;
-  border: 1px solid #d0dbcb;
-  background-color: white;
-  color: #5a5a5a;
-  border-radius: 0;
-  box-shadow: 0 0px 6px rgb(79, 81, 77);
-
+  margin: 26px 0;
+  background-color: #acbfa3;
+  color: white;
+  box-shadow: 1px 1px 8px rgb(52, 53, 25);
+  width: auto;
+  height: auto;
+  font-size: 1.5vw;
+  padding: 8px;
+  transition: all .2s ease-in-out;
+  border-radius: 12px;
 }
 
 .subjectBtn button:hover {
-  background-color: #acbfa3;
-  color: white;
+  background-color: #dfe7db;
+  color: #5a5a5a;  
+  transform: scale(1.1);
+
 }
 
+.hero {
+  align-items: center;
+}
 
+.heroParagraph {
+  width: 50vw;
+  justify-content: center;
+  margin: auto;
 
-.hero p {
-  margin: 26px;
+}
+
+.heroTitle {
+  font-size: 5vw;
+  margin: 10px 0 18px 0;
 }
 
 /* About */
@@ -335,7 +353,7 @@ footer ul li{
 
   }
 
-  .subjectSelect {
+  .subjectBtn {
     display: inline-block;
   }
 
@@ -371,7 +389,7 @@ footer ul li{
     margin: 18px auto;
   }
 
-  .subjectSelect {
+  .subjectBtn {
     display: inline;
   }
   
