@@ -16,8 +16,10 @@ A link to the heroku is here:
 
 ## Description
 
-1. Using the site, a user must create a log in.
-2. Once created the user can click through our store front to find a tutor or self help!
+1. Using the site, a user can read about the company, see the trainers and the shop
+2. A user can create a login
+3. A user must create a log in to view their cart or add anything to it
+4. Once created, the user can click through our store front to find a tutor or self help!
 
 ## Usage
 
