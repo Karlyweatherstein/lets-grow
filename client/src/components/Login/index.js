@@ -11,7 +11,7 @@ import AuthService from '../../utils/auth';
 
 function Login(props) {
 
-  const [formState, setFormState] = useState({ email: '', password: '' });
+  const [formState, setFormState] = useState({ username: '', password: '' });
   const [login, { error }] = useMutation(LOGIN_USER);
 
   const handleFormSubmit = async (event) => {
@@ -46,12 +46,14 @@ function Login(props) {
         <form onSubmit={handleFormSubmit}>
           <input
             type="text"
+            name= "username"
             id="username"
             placeholder="Enter your username!"
             onChange={handleChange}
           />
           <input
             type="text"
+            name= "password"
             id="password"
             placeholder="Enter your password!"
             onChange={handleChange}

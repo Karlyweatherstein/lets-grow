@@ -21,7 +21,7 @@ function Header() {
             </li>
             {/* Logout */}
             <li>
-              <Link to="/">Logout</Link>
+              <Link to="/" onClick={()=> Auth.logout()}>Logout</Link>
             </li>
           </ul>
         </nav>

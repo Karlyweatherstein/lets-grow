@@ -19,7 +19,7 @@ const trainerSchema = new Schema({
          ref: 'Category',
          required: true
     },
-    product: {
+    products: {
         type: Schema.Types.ObjectId,
         ref: 'Product',
         required: true
