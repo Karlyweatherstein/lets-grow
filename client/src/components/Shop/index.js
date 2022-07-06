@@ -56,7 +56,7 @@ function Shop(item) {
                         </p>
                         <p>Price: 2000.00</p>
                         <p>Quantity: THE ONLY ONE`(or is it)`</p>
-                        <button onClick={addToCart} id="cart-btn" className="cart-btn">
+                        <button onClick={addToCart} id="cart-btn-1" className="cart-btn">
                             Add to cart
                         </button>
                     </div>
@@ -71,7 +71,7 @@ function Shop(item) {
                         </p>
                         <p>Price: 2.00</p>
                         <p>Quantity: Unlimited</p>
-                        <button onClick={addToCart} id="cart-btn" className="cart-btn">
+                        <button onClick={addToCart} id="cart-btn-2" className="cart-btn">
                             Add to cart
                         </button>
                     </div>
@@ -86,7 +86,7 @@ function Shop(item) {
                         </p>
                         <p>Price: Priceless</p>
                         <p>Quantity: Unlimited</p>
-                        <button onClick={addToCart} id="cart-btn" className="cart-btn">
+                        <button onClick={addToCart} id="cart-btn-3" className="cart-btn">
                             Add to cart
                         </button>
                     </div>
