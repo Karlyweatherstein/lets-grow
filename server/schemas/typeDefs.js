@@ -19,7 +19,17 @@ type Product {
 
 type Category {
     _id: ID
-    name: String 
+    name: String
+    trainer: [Trainer]
+}
+
+type Trainer {
+    _id: ID
+    name: String
+    description: String
+    image: String
+    products: [Product]
+    category: [Category]
 }
 
 type Order {
