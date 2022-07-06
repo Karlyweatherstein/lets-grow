@@ -206,6 +206,7 @@ nav {
   justify-content: space-between;
   width: 100%;
   margin: 0;
+
 }
 
 nav ul {
@@ -217,11 +218,15 @@ nav ul {
 }
 
 nav ul li {
-  padding: 8px;
+  padding: 6px;
   margin-right: 14px;
   list-style: none;
   font-size: larger;
 
+}
+
+.navLinks {
+  text-align: center;
 }
 
 a {
@@ -331,6 +336,8 @@ footer ul li{
 
 /* Cart */
 
+
+
 .cart h2 {
   font-size: 1.5rem;
   border-bottom: 1px solid var(--dark);
@@ -338,20 +345,13 @@ footer ul li{
   margin: 1rem 0;
 }
 
-.cart .close {
-  position: absolute;
-  top: .5rem;
-  right: .5rem;
-}
+
 
 .cart .close:hover {
   text-decoration: underline;
 }
 
 .cart-closed {
-  position: fixed;
-  top: 2%;
-  right: 1%;
   font-size: 2rem;
   cursor: pointer;
   border-radius: 50%;
@@ -368,6 +368,22 @@ footer ul li{
   width: 50px;
   padding: 0;
   margin: 0 .5rem 1rem 0;
+}
+
+.shoppingModal {
+  background-color: white;
+}
+
+.shoppingModal h1{
+  font-size: 16px;
+  color: #5a5a5a;
+  margin: 2px;
+  display: block;
+}
+
+.shoppingIcon {
+  border: none;
+  background-color: white;
 }
 
 @media screen and (max-width: 768px) {
@@ -409,8 +425,6 @@ footer ul li{
   
   nav ul {
     margin: 5px auto;
-    text-align: center;
-
   }
 
   .subjectBtn {

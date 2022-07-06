@@ -6,6 +6,7 @@ import { pluralize } from "../../utils/helpers";
 import { useStoreContext } from "../../utils/GlobalState";
 import { ADD_TO_CART, UPDATE_CART_QUANTITY } from "../../utils/actions";
 import { idbPromise } from "../../utils/helpers";
+import Auth from "../../utils/auth";
 
 function Shop(item) {
   const { data, loading, error } = useQuery(QUERY_TRAINER_PRODUCTS);
@@ -38,42 +39,45 @@ function Shop(item) {
     }
   };
 
-  return (
-    <div className="shop">
-      <div className="trainers">
-        <div className="trainer-container paragraphFonts">
-          <div className="trainers-card mx-3">
-            <h3>My E-Book</h3>
-            <p>
-              Come read up on all of the magical ways you can be more like
-              me!`(Possible tips on underwater basket weaving included)`
-            </p>
-            <p>Price: 2000.00</p>
-            <p>Quantity: THE ONLY ONE`(or is it)`</p>
-            <button onClick={addToCart} id="cart-btn" className="cart-btn">
-              Add to cart
-            </button>
+  if (Auth.loggedIn()) {
+    return (
+      <div className="shop">
+        <div className="trainers">
+          <div className="trainer-container paragraphFonts">
+            <div className="trainers-card mx-3">
+              <h3>My E-Book</h3>
+              <p>
+                Come read up on all of the magical ways you can be more like
+                me!`(Possible tips on underwater basket weaving included)`
+              </p>
+              <p>Price: 2000.00</p>
+              <p>Quantity: THE ONLY ONE`(or is it)`</p>
+              <button onClick={addToCart} id="cart-btn" className="cart-btn">
+                Add to cart
+              </button>
+            </div>
+          </div>
+          <div className="trainer-container paragraphFonts">
+            <div className="trainers-card mx-3">
+              <h3>Book a Session With Me!</h3>
+              <p>
+                Lets hangout! What else do you need?!`(Possible tips on
+                underwater basket weaving included)`
+              </p>
+              <p>Price: 2.00</p>
+              <p>Quantity: Unlimited</p>
+              <button onClick={addToCart} id="cart-btn" className="cart-btn">
+                Add to cart
+              </button>
+            </div>
           </div>
         </div>
         <div className="trainer-container paragraphFonts">
-          <div className="trainers-card mx-3">
-            <h3>Book a Session With Me!</h3>
-            <p>
-              Lets hangout! What else do you need?!`(Possible tips on underwater basket weaving included)`
-            </p>
-            <p>Price: 2.00</p>
-            <p>Quantity: Unlimited</p>
-            <button onClick={addToCart} id="cart-btn" className="cart-btn">
-              Add to cart
-            </button>
-          </div>
-        </div>
-      </div>
-      <div className="trainer-container paragraphFonts">
           <div className="trainers-card mx-3">
             <h3>Pictures of My Dog!</h3>
             <p>
-              She is a small beagle with one ear... come on you know you want the picture of a one eared beagle
+              She is a small beagle with one ear... come on you know you want
+              the picture of a one eared beagle
             </p>
             <p>Price: Priceless</p>
             <p>Quantity: Unlimited</p>
@@ -83,8 +87,48 @@ function Shop(item) {
           </div>
         </div>
       </div>
-
-  );
+    );
+  } else {
+    return (
+      <div className="shop">
+        <div className="trainers">
+          <div className="trainer-container paragraphFonts">
+            <div className="trainers-card mx-3">
+              <h3>My E-Book</h3>
+              <p>
+                Come read up on all of the magical ways you can be more like
+                me!`(Possible tips on underwater basket weaving included)`
+              </p>
+              <p>Price: 2000.00</p>
+              <p>Quantity: THE ONLY ONE`(or is it)`</p>
+            </div>
+          </div>
+          <div className="trainer-container paragraphFonts">
+            <div className="trainers-card mx-3">
+              <h3>Book a Session With Me!</h3>
+              <p>
+                Lets hangout! What else do you need?!`(Possible tips on
+                underwater basket weaving included)`
+              </p>
+              <p>Price: 2.00</p>
+              <p>Quantity: Unlimited</p>
+            </div>
+          </div>
+        </div>
+        <div className="trainer-container paragraphFonts">
+          <div className="trainers-card mx-3">
+            <h3>Pictures of My Dog!</h3>
+            <p>
+              She is a small beagle with one ear... come on you know you want
+              the picture of a one eared beagle
+            </p>
+            <p>Price: Priceless</p>
+            <p>Quantity: Unlimited</p>
+          </div>
+        </div>
+      </div>
+    );
+  }
 }
 
 export default Shop;
