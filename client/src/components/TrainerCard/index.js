@@ -11,11 +11,20 @@ console.log('hello world', data)
   
 
   return (
-    <li key={key} className="card px-1 py-1">
+    <li key={key}>
       <Link to={`/shop/${_id}`}>
+        <div className="trainers">
+        <div className="trainer-container paragraphFonts">
+        <div className="trainers-card mx-3">
+          
+        <div className="img-container">
         <img alt={name} src={`/images/${image}`} />
+        </div>
         <p>{name}</p>
         <p>{description}</p>
+        </div>
+        </div>
+        </div>
       </Link>
       <div>
         
@@ -25,3 +34,18 @@ console.log('hello world', data)
 }
 
 export default TrainerCard;
+
+ <div className="trainers">
+      <div className="trainers-title">
+        <h1 className="titleFonts">Meet the Trainers!</h1>
+      </div>
+      <div className="trainer-container paragraphFonts">
+        <div className="trainers-card mx-3">
+          <div className="img-container"></div>
+          <h3>
+            Hi my name is who, my name is what, my name is chicka chicka slim
+            shady
+          </h3>
+        </div>
+      </div>
+    </div>

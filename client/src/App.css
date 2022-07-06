@@ -9,7 +9,7 @@
 
 body {
   position: relative;
-  margin: 0px;
+  margin: 0;
   background-image: url(./assets/background-sm.png);
   background-size: 100vw;
   background-repeat: no-repeat;
@@ -103,6 +103,11 @@ a:hover {
 }
 
 /*trainers component styles*/
+
+.trainers li {
+    list-style: none;
+    margin-bottom: 10px;
+}
 .trainers {
     text-align: center;
 }
@@ -242,11 +247,7 @@ a {
 
 .subjectBtn {
   display: flex;
-  justify-content: center;
-<<<<<<< HEAD
-
-=======
->>>>>>> feature/logoutbtn
+  justify-content: center; 
 }
 
 .subjectBtn button {
