@@ -18,8 +18,13 @@ const trainerSchema = new Schema({
          type: Schema.Types.ObjectId,
          ref: 'Category',
          required: true
+<<<<<<< HEAD
     }],
     products: [{
+=======
+    },
+    products: {
+>>>>>>> feature/logoutbtn
         type: Schema.Types.ObjectId,
         ref: 'Product',
         required: true
