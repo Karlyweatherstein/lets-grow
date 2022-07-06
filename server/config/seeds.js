@@ -169,95 +169,96 @@ db.once('open', async () => {
 
     await Trainer.deleteMany();
 
-    const trainers = await Trainer.insertMany([
+    const trainer = await Trainer.insertMany([
         { 
             name: 'James Belk',
             description: 'Here to help you reach all of your fitness dreams!',
             image: 'placeholder',
-            products: [products[0]._id, products[1]._id, products[15]._id],
-            category: [categories[0]._id, categories[6]._id]
+            category: [categories[0]._id, categories[5]._id],
+            products: [products[0]._id, products[15]._id]
         },
         { 
             name: 'Eddie Coan',
             description: 'World respected power-lifter. Guaranteed to get you strong as an ox.',
             image: 'placeholder',
+            category: categories[0]._id,
             products: [products[0]._id, products[1]._id],
-            category: categories[0]._id
         },
         { 
             name: 'Chris Blossom',
             description: 'Nutrition is key! Let me help you with the kitchen.',
             image: 'placeholder',
-            products: products[2]._id,
+            product: products[2]._id,
             category: categories[1]._id
         },
         { 
             name: 'Alex Restrepo',
             description: 'Here to help you carry a tune inside and outside of a bucket!',
             image: 'placeholder',
-            products: [products[3]._id, products[4]._id],
+            product: [products[3]._id, products[4]._id],
             category: categories[2]._id
         },
         { 
             name: 'Vincent van Gogh',
             description: 'While blue might be my favorite color, let me teach you ways without talking your ear off!',
             image: 'placeholder',
-            products: [products[5]._id, products[6]._id],
+            product: [products[5]._id, products[6]._id],
             category: categories[2]._id
         },
         { 
             name: 'Josh Rodeheaver',
             description: 'Learning! Come get all your learnin!',
             image: 'placeholder',
-            products: [products[7]._id, products[8]._id, products[9]._id],
+            product: [products[7]._id, products[8]._id, products[9]._id],
             category: categories[3]._id
         },
         { 
             name: 'Albert Einstein',
-            description: 'While blue might be my favorite color, let me teach you ways without talking your ear off!',
+            description: 'I may not know how to use conditioner but... SCIENCE!',
             image: 'placeholder',
-            products: [products[9]._id, products[10]._id, products[11]._id],
+            product: [products[9]._id, products[10]._id, products[11]._id],
             category: categories[3]._id
         },
         { 
             name: 'Karly Weatherstein',
             description: 'Content creation and getting noticed, here for it',
             image:'placeholder',
-            products: [products[12]._id, products[13]._id, products[14]._id],
+            product: [products[12]._id, products[13]._id, products[14]._id],
             category: categories[4]._id
         }
     ]);
 
-    console.log('trainers seeded');
+    console.log('trainers seeded!');
 
 
     await User.deleteMany();
 
-    await User.create({
-        username: 'jamesbelk',
-        email: 'jamesbelk@testemail.com',
-        password: 'password12345',
-    });
 
-    await User.create({
-        username: 'karlywetherstein',
-        email: 'karlyweatherstein@testemail.com',
-        password: 'password12345',
-    });
+    // await User.create({
+    //     username: 'jamesbelk',
+    //     email: 'jamesbelk@testemail.com',
+    //     password: 'password12345',
+    // });
 
-    await User.create({
-        username: 'joshrodeheaver',
-        email: 'joshrodeheaver@testemail.com',
-        password: 'password12345',
-    });
+    // await User.create({
+    //     username: 'karlywetherstein',
+    //     email: 'karlyweatherstein@testemail.com',
+    //     password: 'password12345',
+    // });
 
-    await User.create({
-        username: 'alejandrorestrepo',
-        email: 'alejandrorestrepo@testemail.com',
-        password: 'password12345',
-    });
+    // await User.create({
+    //     username: 'joshrodeheaver',
+    //     email: 'joshrodeheaver@testemail.com',
+    //     password: 'password12345',
+    // });
 
-    console.log('users seeded');
+    // await User.create({
+    //     username: 'alejandrorestrepo',
+    //     email: 'alejandrorestrepo@testemail.com',
+    //     password: 'password12345',
+    // });
+
+    // console.log('users seeded');
 
     process.exit();
 });

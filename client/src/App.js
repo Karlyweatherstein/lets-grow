@@ -17,12 +17,12 @@ import Hero from "./components/Hero";
 import Footer from "./components/Footer";
 import About from "./components/About";
 import Header from "./components/Header";
-import Fitness from "./components/Trainers/Fitness";
-import Nutrition from "./components/Trainers/Nutrition";
-import TheArts from "./components/Trainers/TheArts";
-import School from "./components/Trainers/School";
-import Marketing from "./components/Trainers/Marketing";
-import Crafts from "./components/Trainers/Crafts";
+// import Fitness from "./components/Trainers/Fitness";
+// import Nutrition from "./components/Trainers/Nutrition";
+// import TheArts from "./components/Trainers/TheArts";
+// import School from "./components/Trainers/School";
+// import Marketing from "./components/Trainers/Marketing";
+// import Crafts from "./components/Trainers/Crafts";
 
 const httpLink = createHttpLink({
   uri: "/graphql",
@@ -57,12 +57,12 @@ function App() {
               <Route path="/signup" element={<Signup />} />
               <Route path="/trainers" element={<Trainers />} />
               <Route path="/shop" element={<Shop />} />
-              <Route path="/fitness" element={<Fitness />} />
+              {/* <Route path="/fitness" element={<Fitness />} />
               <Route path="/nutrition" element={<Nutrition />} />
               <Route path="/theArts" element={<TheArts />} />
               <Route path="/school" element={<School />} />
               <Route path="/marketing" element={<Marketing />} />
-              <Route path="/crafts" element={<Crafts />} />
+              <Route path="/crafts" element={<Crafts />} /> */}
             </Routes>
             <Footer />
           </StoreProvider>

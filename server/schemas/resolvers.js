@@ -1,12 +1,21 @@
 const { AuthenticationError } = require("apollo-server-express");
-const { Category, Order, Product, User } = require("../models");
+const { Category, Order, Product, User, Trainer } = require("../models");
 const { signToken } = require("../utils/auth");
 const stripe = require('stripe')('sk_test_51LHAZTE7UUC0twcLLwlI9Sr68vKMF8A63dDYVbr794se4J0IjzIj5PTZO7ry0Moa7sbqGXWOHKDnLRRODLjaK9YT00agJoSm9n');
 
 const resolvers = {
   Query: {
+    trainers: async() => {
+      return Trainer.find()
+    },
+    trainer: async (parent, { _id }) => {
+      return await Trainer.findById(_id);
+    },
     categories: async () => {
-      return await Category.find();
+      let categories = await Category.find();
+      console.log('this is a test that it isnt working' + categories)
+      return categories
+      // return await Category.find();
     },
     products: async (parent, { category, name }) => {
       const params = {};
@@ -128,8 +137,8 @@ const resolvers = {
         { new: true }
       );
     },
-    login: async (parent, { email, password }) => {
-      const user = await User.findOne({ email });
+    login: async (parent, { username, password }) => {
+      const user = await User.findOne({ username });
 
       if (!user) {
         throw new AuthenticationError("Incorrect credentials");

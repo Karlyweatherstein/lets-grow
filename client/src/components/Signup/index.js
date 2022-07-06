@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import { useMutation } from "@apollo/client";
 import { ADD_USER } from "../../utils/mutations";
-import Auth from "../../utils/auth";
+import AuthService from "../../utils/auth";
+import { Link } from 'react-router-dom';
+
+
 
 function Signup() {
   const [formState, setFormState] = useState({
@@ -21,7 +24,7 @@ function Signup() {
       },
     });
     const token = mutationResponse.data.addUser.token;
-    Auth.login(token);
+    AuthService.login(token);
   };
 
   const handleChange = (event) => {
@@ -42,18 +45,21 @@ function Signup() {
         <form onSubmit={handleFormSubmit}>
           <input
             type="text"
+            name= "email"
             id="email"
             placeholder="Enter your email!"
             onChange={handleChange}
           />
           <input
             type="text"
+            name= "username"
             id="username"
             placeholder="Enter your username!"
             onChange={handleChange}
           />
           <input
             type="text"
+            name="password"
             id="password"
             placeholder="Enter your password!"
             onChange={handleChange}
@@ -67,7 +73,7 @@ function Signup() {
       <div className="community paragraphFonts">
         <h2>
           Already part of the community?
-          <a href="/login"> Login!</a>
+          <Link to="/login"> Login!</Link>
         </h2>
       </div>
     </div>

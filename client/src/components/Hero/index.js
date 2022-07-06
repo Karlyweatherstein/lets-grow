@@ -7,24 +7,24 @@ function Hero() {
       <h1 className="titleFonts">Let's Grow!</h1>
       <div className="subjectSelect">
         <div className="subjectBtn">
-          <Link to="/fitness">
+          <Link to="/trainers">
             <button className="submit-button"> Fitness </button>
           </Link>
-          <Link to="/nutrition">
+          <Link to="/trainers">
             <button className="submit-button"> Nutrition </button>
           </Link>
-          <Link to="/theArts">
+          <Link to="/trainers">
             <button className="submit-button"> The Arts </button>
           </Link>
         </div>
         <div className="subjectBtn">
-          <Link to="/school">
+          <Link to="/trainers">
             <button className="submit-button"> School </button>
           </Link>
-          <Link to="/marketing">
+          <Link to="/trainers">
             <button className="submit-button"> Marketing </button>
           </Link>
-          <Link to="/crafts">
+          <Link to="/trainers">
             <button className="submit-button"> Crafts </button>
           </Link>
         </div>
