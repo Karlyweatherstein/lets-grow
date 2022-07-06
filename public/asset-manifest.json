@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.6d27e351.chunk.css",
+    "main.js": "/static/js/main.542652e5.chunk.js",
+    "main.js.map": "/static/js/main.542652e5.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.ea74f602.js",
+    "runtime-main.js.map": "/static/js/runtime-main.ea74f602.js.map",
+    "static/js/2.bde42fac.chunk.js": "/static/js/2.bde42fac.chunk.js",
+    "static/js/2.bde42fac.chunk.js.map": "/static/js/2.bde42fac.chunk.js.map",
+    "static/js/3.52e0a080.chunk.js": "/static/js/3.52e0a080.chunk.js",
+    "static/js/3.52e0a080.chunk.js.map": "/static/js/3.52e0a080.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.6d27e351.chunk.css.map": "/static/css/main.6d27e351.chunk.css.map",
+    "static/js/2.bde42fac.chunk.js.LICENSE.txt": "/static/js/2.bde42fac.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/static/media/background-sm.a70783b4.png",
+    "static/media/email-icon.72609bca.png": "/static/media/email-icon.72609bca.png",
+    "static/media/insta-icon.d76cc387.png": "/static/media/insta-icon.d76cc387.png",
+    "static/media/lg-logo.fd5e1f11.png": "/static/media/lg-logo.fd5e1f11.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ea74f602.js",
+    "static/js/2.bde42fac.chunk.js",
+    "static/css/main.6d27e351.chunk.css",
+    "static/js/main.542652e5.chunk.js"
+  ]
+}
