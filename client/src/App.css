@@ -291,17 +291,19 @@ a {
 .about-box {
   background-color: #999999;
   color: #d0dbcb;
-  margin: 0 15vw 0 15vw;
+  margin: 0 20vw 0 20vw;
   align-items: center;
 }
 
 .about-box p {
   padding: 12px;
+  font-size: 2.25vh;
+  line-height: 4vh;
 }
 
 .about h1{
   text-align: center;
-  font-size: 5vh;
+  font-size: 6vh;
   margin: 40px;
 }
 
@@ -327,6 +329,62 @@ footer ul li{
  
 }
 
+/* Cart */
+
+.cart h2 {
+  font-size: 1.5rem;
+  border-bottom: 1px solid var(--dark);
+  padding-bottom: .5rem;
+  margin: 1rem 0;
+}
+
+.cart .close {
+  position: absolute;
+  top: .5rem;
+  right: .5rem;
+}
+
+.cart .close:hover {
+  text-decoration: underline;
+}
+
+.cart-closed {
+  position: fixed;
+  top: 2%;
+  right: 1%;
+  font-size: 2rem;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: .25rem;
+  width: 50px;
+  height: 50px;
+}
+
+.cart-closed:hover {
+  transform: rotate(8deg);
+}
+
+.cart input {
+  width: 50px;
+  padding: 0;
+  margin: 0 .5rem 1rem 0;
+}
+
+@media screen and (max-width: 768px) {
+  .cart {
+    position: relative;
+    max-width: 100%;
+    max-height: auto;
+    box-shadow: none;
+  }
+
+  .cart-closed {
+    position: relative;
+    margin: 0 auto;
+  }
+}
+
+
 
 /* Mobile responsive */
 /* tablets */
@@ -351,6 +409,7 @@ footer ul li{
   
   nav ul {
     margin: 5px auto;
+    text-align: center;
 
   }
 

@@ -25,13 +25,14 @@ function Header() {
                 Logout
               </Link>
             </li>
-            {/* <li>
-              <div className="cart-closed" onClick={toggleCart}>
+            <li className="cart">
+              {/* onClick={toggleCart} */}
+              <div className="cart-closed">
                 <span role="img" aria-label="trash">
                   🛒
                 </span>
               </div>
-            </li> */}
+            </li>
           </ul>
         </nav>
       );
