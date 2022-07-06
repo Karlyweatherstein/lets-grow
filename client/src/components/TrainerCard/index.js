@@ -16,7 +16,7 @@ const { data } = useQuery(QUERY_TRAINERS);
 
   return (
     <li key={key}>
-      <Link to={`/shop/${_id}`}>
+      <Link to={`/shop`}>
         <div className="trainers">
         <div className="trainer-container paragraphFonts">
         <div className="trainers-card mx-3">
