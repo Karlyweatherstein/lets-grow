@@ -173,7 +173,7 @@ db.once('open', async () => {
         { 
             name: 'James Belk',
             description: 'Here to help you reach all of your fitness dreams!',
-            image: 'placeholder',
+            image: 'https://picsum.photos/id/1/200/275',
             category: [categories[0]._id, categories[5]._id],
             products: [products[0]._id, products[15]._id]
         },
