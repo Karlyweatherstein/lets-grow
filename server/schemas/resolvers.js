@@ -6,14 +6,19 @@ const stripe = require('stripe')('sk_test_51LHAZTE7UUC0twcLLwlI9Sr68vKMF8A63dDYV
 const resolvers = {
   Query: {
     trainers: async() => {
-      return Trainer.find()
+      return Trainer.find().populate("products").populate({
+        path: 'products',
+        populate: 'category',
+      });
     },
     trainer: async (parent, { _id }) => {
-      return await Trainer.findById(_id);
+      return await Trainer.findById(_id).populate("products").populate({
+        path: 'products',
+        populate: 'category',
+      });
     },
     categories: async () => {
       let categories = await Category.find();
-      console.log('this is a test that it isnt working' + categories)
       return categories
       // return await Category.find();
     },
@@ -30,7 +35,10 @@ const resolvers = {
         };
       }
 
-      return await Product.find(params).populate("category");
+      return await Product.find(params).populate("product").populate({
+        path: 'products',
+        populate: 'product',
+      });
     },
     product: async (parent, { _id }) => {
       return await Product.findById(_id).populate("category");

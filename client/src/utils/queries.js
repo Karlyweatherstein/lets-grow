@@ -25,7 +25,24 @@ export const QUERY_TRAINERS = gql`
   }
 }
 `;
-// export const QUERY_TRAINER = 
+
+export const QUERY_TRAINER_PRODUCTS = gql`
+query Query($id: ID!) {
+  trainer(_id: ID) {
+    name
+    description
+    image
+    products {
+      name
+      description
+      quantity
+      price
+      image
+    }
+  }
+}
+`;
+
 
 
 export const QUERY_CHECKOUT = gql`

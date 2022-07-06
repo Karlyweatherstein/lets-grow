@@ -29,7 +29,7 @@ type Trainer {
     name: String
     description: String
     image: String
-    # products: [Product]
+    products: [Product]
     # category: [Category]
 }
 
@@ -52,8 +52,8 @@ type Query {
     user: User
     categories: [Category]
     products(category: ID, name: String): [Product]
-    product(_id: ID!): Product
-    order(_id: ID!): Order
+    product(_id: ID): Product
+    order (_id: ID!): Order
     checkout(session: ID!): Checkout
     trainers: [Trainer]
     trainer(_id: ID!): Trainer

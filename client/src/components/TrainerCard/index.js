@@ -10,7 +10,7 @@ import { QUERY_TRAINERS } from '../../utils/queries';
 
 function TrainerCard(item) {
 const { data } = useQuery(QUERY_TRAINERS);
-console.log('hello world', data)
+
   const { image, name, _id, description, key } = item;
   
 

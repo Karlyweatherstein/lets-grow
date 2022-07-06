@@ -1,21 +1,21 @@
 import React from 'react';
+import ShopItem from '../ShopItem';
 import { useQuery } from '@apollo/client';
-import { QUERY_TRAINER } from '../../utils/queries';
-import { Link } from 'react-router-dom';
+import { QUERY_TRAINER_PRODUCTS } from '../../utils/queries';
 import { pluralize } from '../../utils/helpers';
 import { useStoreContext } from "../../utils/GlobalState";
 import { ADD_TO_CART, UPDATE_CART_QUANTITY } from "../../utils/actions";
 import { idbPromise } from "../../utils/helpers";
 
-
-
 function Shop(item) {
-  // const {  loading, data } = useQuery(QUERY_TRAINER);
 
-  // console.log("data for single trainer: ", data);
+  const {  data, loading, error } = useQuery(QUERY_TRAINER_PRODUCTS);
+  console.log({error, loading, data });
+  
   const [state, dispatch] = useStoreContext();
 
   const {
+    name,
     image,
     _id,
     quantity,
@@ -44,30 +44,31 @@ function Shop(item) {
       });
       idbPromise('cart', 'put', { ...item, purchaseQuantity: 1 });
     }
-  }
+  } 
+  
   return (
 
         <div className='shop'>
-          <div className='shop-title'>
-            <h1 className='titleFonts'>Slim Shady's Shop</h1>
+          
+        <div className='shop-title'>
+            <h1 className='titleFonts'>{name}</h1>
             <h3 className='paragraphFonts'>
-              {/* Hello my name is Marshall Mathers, and I am an art teacher. After
-              making a switch from the rap game I now specialize in pastels and
-              water color paintings. Please checkout my store below to see if you
-              are interested in anything! */}
-              {description}
+                          {description}
             </h3>
-          </div>
+         </div>   {data ? ( 
           <div className='products-container paragraphFonts' >
             <div className='products-card mx-3'>
               <div className='img-container'>
-                <Link to={`/shop/${_id}`}>
-                  <img alt={image} src={`/images/${image}`} />
-                  <h3>{}</h3>
-                </Link>
-              </div>
-              <div>
-                <div>
+              {data.trainers.map((trainer) => (
+              <ShopItem
+              key={_id}
+              _id={_id}
+              image={image}
+              name={name}
+              description={description}
+            />
+            
+          ))}
                   {quantity} {pluralize('item', quantity)} in stock
                 </div>
                 <span>${price}</span>
@@ -76,15 +77,15 @@ function Shop(item) {
                 Add to cart
               </button>
             </div>
+            ) : (
+              <h3>You haven't added any products yet!</h3>
+            )}
+            {loading ? <img src='' alt="loading" /> : null}
           </div>
-        </div>
-   
-    //   ) : (
-    //     <h3>You haven't added any products yet!</h3>
-    //   )}
-    //   {loading ? <img src='' alt="loading" /> : null}
-    // </div>
-  );
+         
+     
+       
+     );
 }
 
 export default Shop;
