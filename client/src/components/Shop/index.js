@@ -1,8 +1,6 @@
 import React from "react";
-
 import { useQuery } from "@apollo/client";
 import { QUERY_TRAINER_PRODUCTS } from "../../utils/queries";
-import { pluralize } from "../../utils/helpers";
 import { useStoreContext } from "../../utils/GlobalState";
 import { ADD_TO_CART, UPDATE_CART_QUANTITY } from "../../utils/actions";
 import { idbPromise } from "../../utils/helpers";

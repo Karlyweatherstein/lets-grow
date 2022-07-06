@@ -5,7 +5,6 @@ import AuthService from "../../utils/auth";
 import { Link } from 'react-router-dom';
 
 
-
 function Signup() {
   const [formState, setFormState] = useState({
     email: "",

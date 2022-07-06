@@ -3,11 +3,7 @@ import { useMutation } from '@apollo/client';
 import { Link } from 'react-router-dom';
 import { LOGIN_USER } from '../../utils/mutations';
 import AuthService from '../../utils/auth';
-// import { useMutation } from '@apollo/client';
-// import { LOGIN_USER } from '../../utils/mutations';
-// import Auth from '../../utils/auth';
 
-//const path = require('path');
 
 function Login(props) {
 

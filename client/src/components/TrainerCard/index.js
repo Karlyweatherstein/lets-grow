@@ -1,11 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { pluralize } from "../../utils/helpers";
 import { useQuery } from '@apollo/client';
 import { QUERY_TRAINERS } from '../../utils/queries';
-
-
-
 
 
 function TrainerCard(item) {
