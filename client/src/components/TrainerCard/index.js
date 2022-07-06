@@ -4,6 +4,10 @@ import { pluralize } from "../../utils/helpers";
 import { useQuery } from '@apollo/client';
 import { QUERY_TRAINERS } from '../../utils/queries';
 
+
+
+
+
 function TrainerCard(item) {
 const { data } = useQuery(QUERY_TRAINERS);
 console.log('hello world', data)
