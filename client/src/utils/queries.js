@@ -25,7 +25,23 @@ export const QUERY_TRAINERS = gql`
   }
 }
 `;
-// export const QUERY_TRAINER = 
+
+export const QUERY_TRAINER_PRODUCTS = gql`
+{
+  trainer {
+    name 
+    description
+    products {
+      name
+      description
+      price
+      quantity
+      image
+    }
+  }
+}
+`;
+
 
 
 export const QUERY_CHECKOUT = gql`

@@ -1,22 +1,20 @@
 import React from "react";
-import { Link } from "react-router-dom";
+
 import { pluralize } from "../../utils/helpers";
 import { useQuery } from '@apollo/client';
-import { QUERY_TRAINERS } from '../../utils/queries';
+import { QUERY_TRAINER_PRODUCTS } from '../../utils/queries';
 
-function TrainerCard(item) {
-const { data } = useQuery(QUERY_TRAINERS);
-console.log('hello world', data)
+function ShopItem(item) {
+const { data } = useQuery(QUERY_TRAINER_PRODUCTS);
+console.log('trainer products', data)
   const { image, name, _id, description, key } = item;
   
 
   return (
     <li key={key} className="card px-1 py-1">
-      <Link to={`/shop`}>
         <img alt={name} src={`/images/${image}`} />
         <p>{name}</p>
         <p>{description}</p>
-      </Link>
       <div>
         
       </div>
@@ -24,4 +22,4 @@ console.log('hello world', data)
   );
 }
 
-export default TrainerCard;
+export default ShopItem;
