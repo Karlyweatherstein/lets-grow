@@ -22,7 +22,7 @@ console.log('hello world', data)
         <div className="trainers-card mx-3">
           
         <div className="img-container">
-        <img alt={name} src={`/images/${image}`} />
+        <img alt={name} src={`${image}`} />
         </div>
         <p>{name}</p>
         <p>{description}</p>
