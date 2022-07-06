@@ -2,9 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/lg-logo.png";
 import Auth from "../../utils/auth";
+import { TOGGLE_CART } from "../../utils/actions";
 
 function Header() {
-
   function showHeader() {
     if (Auth.loggedIn()) {
       return (
@@ -21,11 +21,20 @@ function Header() {
             </li>
             {/* Logout */}
             <li>
-              <Link to="/" onClick={()=> Auth.logout()}>Logout</Link>
+              <Link to="/" onClick={() => Auth.logout()}>
+                Logout
+              </Link>
             </li>
+            {/* <li>
+              <div className="cart-closed" onClick={toggleCart}>
+                <span role="img" aria-label="trash">
+                  🛒
+                </span>
+              </div>
+            </li> */}
           </ul>
         </nav>
-      )
+      );
     } else {
       return (
         <nav className="paragraphFonts">
@@ -47,16 +56,12 @@ function Header() {
         </nav>
       );
     }
-
   }
   return (
     <header>
-      <nav>
-        {showHeader()}
-      </nav>
+      <nav>{showHeader()}</nav>
     </header>
   );
-
 }
 
 export default Header;
