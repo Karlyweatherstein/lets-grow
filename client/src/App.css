@@ -242,6 +242,7 @@ a {
 
 .subjectBtn {
   display: flex;
+  justify-content: center;
 
 }
 

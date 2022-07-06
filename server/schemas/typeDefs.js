@@ -15,6 +15,7 @@ type Product {
     quantity: Int
     price: Float
     category: Category
+    image: String
 }
 
 type Category {
@@ -28,8 +29,8 @@ type Trainer {
     name: String
     description: String
     image: String
-    product: [Product]
-    category: [Category]
+    # products: [Product]
+    # category: [Category]
 }
 
 type Order {
@@ -54,6 +55,8 @@ type Query {
     product(_id: ID!): Product
     order (_id: ID!): Order
     checkout(session: ID!): Checkout
+    trainers: [Trainer]
+    trainer(_id: ID!): Trainer
 }
 
 type Mutation {

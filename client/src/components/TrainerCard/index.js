@@ -1,27 +1,26 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { pluralize } from "../../utils/helpers";
-import { useStoreContext } from "../../utils/GlobalState";
-
+import { useQuery } from '@apollo/client';
+import { QUERY_TRAINERS } from '../../utils/queries';
 
 function TrainerCard(item) {
-  const [state, dispatch] = useStoreContext();
-
-  const { image, name, _id, price, quantity } = item;
+const { data } = useQuery(QUERY_TRAINERS);
+console.log('hello world', data)
+  const { image, name, _id, description, key } = item;
+  
 
   return (
-    <div className="card px-1 py-1">
-      <Link to={`/products/${_id}`}>
+    <li key={key} className="card px-1 py-1">
+      <Link to={`/shop/${_id}`}>
         <img alt={name} src={`/images/${image}`} />
         <p>{name}</p>
+        <p>{description}</p>
       </Link>
       <div>
-        <div>
-          {quantity} {pluralize("item", quantity)} in stock
-        </div>
-        <span>${price}</span>
+        
       </div>
-    </div>
+    </li>
   );
 }
 

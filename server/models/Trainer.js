@@ -14,16 +14,16 @@ const trainerSchema = new Schema({
     image: {
         type: String
       },
-    category: {
+    category: [{
          type: Schema.Types.ObjectId,
          ref: 'Category',
          required: true
-    },
-    product: {
+    }],
+    products: [{
         type: Schema.Types.ObjectId,
         ref: 'Product',
         required: true
-    } 
+    }] 
 });
 
 const Trainer = mongoose.model('Trainer', trainerSchema);
