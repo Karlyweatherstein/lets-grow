@@ -1,6 +1,5 @@
 import CartItem from "../CartItem";
 import Auth from "../../utils/auth";
-import "./style.css";
 import { useStoreContext } from "../../utils/GlobalState";
 import React, { useEffect } from "react";
 import { TOGGLE_CART, ADD_MULTIPLE_TO_CART } from "../../utils/actions";
