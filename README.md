@@ -10,9 +10,9 @@
 
 https://github.com/Karlyweatherstein/lets-grow
 
-## Link to deployed site:
+## Link to deployed site (Heroku):
 
-A link to the heroku is here:
+https://limitless-crag-16722.herokuapp.com/
 
 ## Description
 
